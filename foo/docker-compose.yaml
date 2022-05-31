@@ -1,0 +1,13 @@
+version: "3"
+
+networks:
+  foobar_default:
+    external: true
+
+services:
+  app:
+    image: nginx:latest
+    ports:
+      - "81:80"
+    networks:
+      - foobar_default
